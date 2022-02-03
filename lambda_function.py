@@ -1,6 +1,6 @@
 import datetime
 
-def lambda_handler(event, context):
+def lambda_handler():
     return calculateValidTaxYear()
 
 def calculateValidTaxYear():
