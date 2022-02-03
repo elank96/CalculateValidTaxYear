@@ -53,5 +53,3 @@ def responseMapper(response: dict) -> dict:
             "Status": 500,
             "Body": {"Internal Server Error": str(response[1])}
         }
-
-print(lambda_handler())
