@@ -1,6 +1,6 @@
 import datetime
 
-def lambda_handler() -> dict:
+def lambda_handler(event, context) -> dict:
     """
     lambda_handler() calls calculateValidTaxYear() and passes its return value to responseMapper().
     :return: A dictionary value representing a network response returned by responseMapper()
@@ -53,3 +53,5 @@ def responseMapper(response: dict) -> dict:
             "Status": 500,
             "Body": {"Internal Server Error": str(response[1])}
         }
+
+print(lambda_handler())
