@@ -9,6 +9,5 @@ def calculateValidTaxYear():
     if currDate >= taxDay: # if the currentDate has passed or is Tax Day
         return  [taxYear] #return the current year we are in which will equal the current Tax year (this is a given)
    
-    return [str(int(taxYear) - 1), taxYear] #currentDate has not passed Tax Day, thus return last year and this year
+    return {"Valid Tax Years:" [str(int(taxYear) - 1), taxYear]} #currentDate has not passed Tax Day, thus return last year and this year
         
-print(calculateValidTaxYear())
