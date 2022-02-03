@@ -1,5 +1,8 @@
 import datetime
 
+def lambda_handler(event, context):
+    return calculateValidTaxYear()
+
 def calculateValidTaxYear():
     taxDay = datetime.datetime(2022, 4, 18) #initialize Tax Day as datetime
     currDate = datetime.datetime.now() #gets current date as datetime
