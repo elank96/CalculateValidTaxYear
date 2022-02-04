@@ -1,13 +1,13 @@
 import datetime
 
-def lambda_handler(event, context) -> dict:
+def lambda_handler(event, context):
     """
     lambda_handler() calls calculateValidTaxYear() and passes its return value to responseMapper().
     :return: A dictionary value representing a network response returned by responseMapper()
     """
     return responseMapper(calculateValidTaxYear())
 
-def calculateValidTaxYear() -> dict:
+def calculateValidTaxYear():
     """
     calculateValidTaxYear() fetches the current date and returns the 
     valid tax years for that date for Tax Day 2022
@@ -33,7 +33,7 @@ def calculateValidTaxYear() -> dict:
     except Exception as ex:
         return {1: ex}
 
-def responseMapper(response: dict) -> dict:
+def responseMapper(response):
     """
     responseMapper() parses the parameter passed and maps the dict value to a custom response body
     based on the Response Key passed in the response.

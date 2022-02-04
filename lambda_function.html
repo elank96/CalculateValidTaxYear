@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module lambda_function</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>lambda_function</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/elankainen/Developer/TaxYear/lambda_function.py">/Users/elankainen/Developer/TaxYear/lambda_function.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-calculateValidTaxYear"><strong>calculateValidTaxYear</strong></a>()</dt><dd><tt><a href="#-calculateValidTaxYear">calculateValidTaxYear</a>()&nbsp;fetches&nbsp;the&nbsp;current&nbsp;date&nbsp;and&nbsp;returns&nbsp;the&nbsp;<br>
+valid&nbsp;tax&nbsp;years&nbsp;for&nbsp;that&nbsp;date&nbsp;for&nbsp;Tax&nbsp;Day&nbsp;2022<br>
+&nbsp;<br>
+:return:&nbsp;Returns&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;a&nbsp;custom&nbsp;Response&nbsp;Key&nbsp;<br>
+that&nbsp;maps&nbsp;to&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;valid&nbsp;tax&nbsp;years&nbsp;for&nbsp;the&nbsp;current&nbsp;date<br>
+&nbsp;<br>
+Abiding&nbsp;by&nbsp;the&nbsp;MVC&nbsp;philosophy,&nbsp;this&nbsp;function&nbsp;should&nbsp;never&nbsp;return&nbsp;or&nbsp;be&nbsp;informed&nbsp;of<br>
+any&nbsp;response&nbsp;codes&nbsp;that&nbsp;pertain&nbsp;to&nbsp;its&nbsp;return&nbsp;value.&nbsp;Rather&nbsp;a&nbsp;Response&nbsp;Key&nbsp;is&nbsp;utilized<br>
+that&nbsp;handler&nbsp;functions&nbsp;will&nbsp;convert&nbsp;to&nbsp;an&nbsp;appropriate&nbsp;response</tt></dd></dl>
+ <dl><dt><a name="-lambda_handler"><strong>lambda_handler</strong></a>(event, context)</dt><dd><tt><a href="#-lambda_handler">lambda_handler</a>()&nbsp;calls&nbsp;<a href="#-calculateValidTaxYear">calculateValidTaxYear</a>()&nbsp;and&nbsp;passes&nbsp;its&nbsp;return&nbsp;value&nbsp;to&nbsp;<a href="#-responseMapper">responseMapper</a>().<br>
+:return:&nbsp;A&nbsp;dictionary&nbsp;value&nbsp;representing&nbsp;a&nbsp;network&nbsp;response&nbsp;returned&nbsp;by&nbsp;<a href="#-responseMapper">responseMapper</a>()</tt></dd></dl>
+ <dl><dt><a name="-responseMapper"><strong>responseMapper</strong></a>(response)</dt><dd><tt><a href="#-responseMapper">responseMapper</a>()&nbsp;parses&nbsp;the&nbsp;parameter&nbsp;passed&nbsp;and&nbsp;maps&nbsp;the&nbsp;dict&nbsp;value&nbsp;to&nbsp;a&nbsp;custom&nbsp;response&nbsp;body<br>
+based&nbsp;on&nbsp;the&nbsp;Response&nbsp;Key&nbsp;passed&nbsp;in&nbsp;the&nbsp;response.<br>
+Response&nbsp;Key&nbsp;=&nbsp;0&nbsp;when&nbsp;the&nbsp;response&nbsp;parameter&nbsp;is&nbsp;a&nbsp;success&nbsp;response<br>
+Response&nbsp;Key&nbsp;=&nbsp;1&nbsp;when&nbsp;the&nbsp;response&nbsp;parameter&nbsp;is&nbsp;an&nbsp;error&nbsp;response<br>
+&nbsp;<br>
+:param&nbsp;:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;a&nbsp;custom&nbsp;Response&nbsp;Key&nbsp;and&nbsp;a&nbsp;Value<br>
+:return:&nbsp;Returns&nbsp;a&nbsp;response&nbsp;with&nbsp;a&nbsp;Status&nbsp;Code&nbsp;and&nbsp;Body&nbsp;containing&nbsp;the&nbsp;value&nbsp;parsed&nbsp;in&nbsp;the&nbsp;parameter</tt></dd></dl>
+</td></tr></table>
+</body></html>
